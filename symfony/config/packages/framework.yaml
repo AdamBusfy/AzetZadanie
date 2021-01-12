@@ -1,5 +1,7 @@
 framework:
     secret: '%env(APP_SECRET)%'
+    validation: { enabled: true }
+
     #csrf_protection: true
     #http_method_override: true
 
@@ -14,3 +16,4 @@ framework:
     #fragments: true
     php_errors:
         log: true
+    ide: 'phpstorm://open?file=%%f&line=%%l&/var/www/symfony/>/Users/admin/PhpstormProjects/symfony/symfony/'
