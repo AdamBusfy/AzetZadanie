@@ -2,30 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88142b11-98e8-4fff-9dbe-bfe6392316b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/symfony/config/packages/security.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/config/packages/test/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/config/packages/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/css/register_page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/src/Controller/AnotherPageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/src/Controller/HomepageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/src/Controller/ItemController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/src/DataFixtures/ItemFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/src/Entity/Item.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/src/Migrations/Version20210112123840.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/src/Migrations/Version20210112173629.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/src/Migrations/Version20210112190819.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/src/Repository/ItemRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/templates/item/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/templates/page/homepage/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/.env" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/config/routes/annotations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/config/routes/annotations.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/symfony.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/css/homepage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/css/security.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/js/homepage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/src/Controller/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/src/Entity/Gallery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/src/Repository/GalleryRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/templates/page/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/public/css/register_page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Controller/HomepageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Controller/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Entity/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Entity/Item.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/templates/page/homepage/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/registration/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,8 +167,23 @@
       <option name="presentableId" value="Default" />
       <updated>1610386492725</updated>
       <workItem from="1610386493967" duration="10107000" />
-      <workItem from="1610452462738" duration="21104000" />
+      <workItem from="1610452462738" duration="45928000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1610478738191</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610478738191</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init">
+      <created>1610478807975</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610478807975</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,16 +191,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="WindowStateProjectService">
     <state x="299" y="-1148" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1610463862473">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
     <state x="299" y="-1148" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610463862473" />
-    <state x="313" y="-1145" key="CommitChangelistDialog2" timestamp="1610478542708">
+    <state x="313" y="-1145" key="CommitChangelistDialog2" timestamp="1610478807766">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="313" y="-1145" key="CommitChangelistDialog2/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610478542708" />
+    <state x="313" y="-1145" key="CommitChangelistDialog2/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610478807766" />
     <state x="586" y="-816" width="680" height="192" key="Github.ShareDialog" timestamp="1610478642730">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
@@ -196,14 +211,14 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="341" y="133" key="NewPhpClassDialog/0.0.1280.800/-574.-1440.2560.1440@0.0.1280.800" timestamp="1610396996113" />
-    <state x="306" y="-980" key="Vcs.Push.Dialog.v2" timestamp="1610478548125">
+    <state x="306" y="-980" key="Vcs.Push.Dialog.v2" timestamp="1610478816158">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="306" y="-980" key="Vcs.Push.Dialog.v2/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610478548125" />
-    <state x="102" y="-1161" width="1560" height="882" key="find.popup" timestamp="1610476868330">
-      <screen x="-574" y="-1440" width="2560" height="1440" />
+    <state x="306" y="-980" key="Vcs.Push.Dialog.v2/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610478816158" />
+    <state x="338" y="155" width="780" height="490" key="find.popup" timestamp="1610543685110">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="102" y="-1161" width="1560" height="882" key="find.popup/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610476868330" />
-    <state x="338" y="155" width="780" height="490" key="find.popup/0.0.1280.800/-574.-1440.2560.1440@0.0.1280.800" timestamp="1610394761707" />
+    <state x="102" y="-1161" width="1560" height="882" key="find.popup/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610537701009" />
+    <state x="338" y="155" width="780" height="490" key="find.popup/0.0.1280.800/-574.-1440.2560.1440@0.0.1280.800" timestamp="1610543685110" />
   </component>
 </project>

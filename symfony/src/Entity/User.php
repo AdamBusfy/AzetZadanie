@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -36,6 +38,34 @@ class User implements UserInterface
      */
     private $password;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Gallery::class, mappedBy="user")
+     */
+    private $galleries;
+
+    public function __construct()
+    {
+        $this->galleries = new ArrayCollection();
+    }
+
+//    /**
+//     * @ORM\OneToMany(targetEntity="App\Entity\Item", mappedBy="user")
+//     */
+//    private $items;
+//
+//    public function __construct()
+//    {
+//        $this->items = new ArrayCollection();
+//    }
+//
+//    /**
+//     * @return Collection|Item[]
+//     */
+//    public function getItems(): Collection
+//    {
+//        return $this->items;
+//    }
+//
     public function getId(): ?int
     {
         return $this->id;
@@ -112,5 +142,35 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    /**
+     * @return Collection|Gallery[]
+     */
+    public function getGalleries(): Collection
+    {
+        return $this->galleries;
+    }
+
+    public function addGallery(Gallery $gallery): self
+    {
+        if (!$this->galleries->contains($gallery)) {
+            $this->galleries[] = $gallery;
+            $gallery->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGallery(Gallery $gallery): self
+    {
+        if ($this->galleries->removeElement($gallery)) {
+            // set the owning side to null (unless already changed)
+            if ($gallery->getUser() === $this) {
+                $gallery->setUser(null);
+            }
+        }
+
+        return $this;
     }
 }
