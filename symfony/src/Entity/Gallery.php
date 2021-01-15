@@ -27,7 +27,7 @@ class Gallery
     /**
      * @ORM\OneToMany(targetEntity=Item::class, mappedBy="gallery")
      */
-    private $gallery;
+    private $items;
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="galleries")
@@ -35,9 +35,14 @@ class Gallery
      */
     private $user;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $description;
+
     public function __construct()
     {
-        $this->gallery = new ArrayCollection();
+        $this->items = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -60,27 +65,27 @@ class Gallery
     /**
      * @return Collection|Item[]
      */
-    public function getGallery(): Collection
+    public function getItems(): Collection
     {
-        return $this->gallery;
+        return $this->items;
     }
 
-    public function addGallery(Item $gallery): self
+    public function addItem(Item $item): self
     {
-        if (!$this->gallery->contains($gallery)) {
-            $this->gallery[] = $gallery;
-            $gallery->setGallery($this);
+        if (!$this->items->contains($item)) {
+            $this->items[] = $item;
+            $item->setGallery($this);
         }
 
         return $this;
     }
 
-    public function removeGallery(Item $gallery): self
+    public function removeItem(Item $item): self
     {
-        if ($this->gallery->removeElement($gallery)) {
+        if ($this->items->removeElement($item)) {
             // set the owning side to null (unless already changed)
-            if ($gallery->getGallery() === $this) {
-                $gallery->setGallery(null);
+            if ($item->getGallery() === $this) {
+                $item->setGallery(null);
             }
         }
 
@@ -95,6 +100,18 @@ class Gallery
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }

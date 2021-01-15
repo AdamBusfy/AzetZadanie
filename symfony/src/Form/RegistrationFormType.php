@@ -24,7 +24,7 @@ class RegistrationFormType extends AbstractType
                 'required' => false,
                 'constraints' => [
                     new IsTrue([
-                        'message' => 'You should agree to our terms.',
+                        'message' => 'You must agree to our terms.',
                     ]),
                 ],
             ])
@@ -47,8 +47,7 @@ class RegistrationFormType extends AbstractType
             ->add('submitButton', SubmitType::class, [
                 'label'=>'Register',
                 'attr'=> ['class' =>'btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm']
-            ])
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

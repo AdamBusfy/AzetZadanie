@@ -90,6 +90,7 @@
       <path value="$PROJECT_DIR$/symfony/vendor/symfony/intl" />
       <path value="$PROJECT_DIR$/symfony/vendor/symfony/polyfill-intl-icu" />
       <path value="$PROJECT_DIR$/symfony/vendor/symfony/mailgun-mailer" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/webpack-encore-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

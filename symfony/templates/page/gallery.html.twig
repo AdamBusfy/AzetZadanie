@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block title %}HomePage{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('pageHomepage') }}
+    {{ encore_entry_script_tags('pageHomepage') }}
+{% endblock %}
+
+{% block body %}
+    {{ include('layouts/uploadPhoto.html.twig') }}
+    {{ include('layouts/navbar.html.twig') }}
+
+    <div class="container">
+        <div class="row">
+            {% for item in items %}
+                {# <div class="row"> #}
+                <div class="col-sm-6 col-md-4 col-xl-3">
+                    <div class="img-box">
+                        <img src="{{ asset(item.getPhoto()) }}" alt=""/>
+                        {# <img src="{{ asset("public/images/#{item.getPhoto()}") }}" alt="" /> #}
+                        <div class="transparent-box">
+                            <div class="caption">
+                                <p>{{ item.name }}</p>
+                                <p class="opacity-low">{{ item.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {# </div> #}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <a href="#" class="float" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">
+        <i class="fa fa-plus my-float"></i>
+    </a>
+    {# </div> #}
+{% endblock %}

@@ -35,25 +35,22 @@ class RegistrationController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
-            // do anything else you need here, like send an email
-
 
             //Ak by som chcel aby ho rovno aj prihlasilo po registracii
 
-//            $guardHandler->authenticateUserAndHandleSuccess(
-//                $user,
-//                $request,
-//                $authenticator,
-//                'main' // firewall name in security.yaml
-//            );
+            $guardHandler->authenticateUserAndHandleSuccess(
+                $user,
+                $request,
+                $authenticator,
+                'main' // firewall name in security.yaml
+            );
 
-            $this->addFlash('success', 'Account successfully created! Let\'s log in ');
+            $this->addFlash('success', 'Account successfully created!');
 
-            return $this->redirectToRoute('app_login');
-
+            return $this->redirectToRoute('home_show');
         }
 
-        return $this->render('registration/register.html.twig', [
+        return $this->render('page/register.html.twig', [
             'registrationForm' => $form->createView(),
         ]);
     }

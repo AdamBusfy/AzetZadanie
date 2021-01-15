@@ -19,6 +19,8 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxslt1-dev \
     acl \
+    nodejs \
+    npm \
     && echo 'alias sf="php bin/console"' >> ~/.bashrc
 
 RUN docker-php-ext-configure gd --with-jpeg --with-freetype 

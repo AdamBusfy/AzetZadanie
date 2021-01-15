@@ -48,24 +48,6 @@ class User implements UserInterface
         $this->galleries = new ArrayCollection();
     }
 
-//    /**
-//     * @ORM\OneToMany(targetEntity="App\Entity\Item", mappedBy="user")
-//     */
-//    private $items;
-//
-//    public function __construct()
-//    {
-//        $this->items = new ArrayCollection();
-//    }
-//
-//    /**
-//     * @return Collection|Item[]
-//     */
-//    public function getItems(): Collection
-//    {
-//        return $this->items;
-//    }
-//
     public function getId(): ?int
     {
         return $this->id;

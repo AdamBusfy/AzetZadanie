@@ -2,15 +2,10 @@
 {% block title %}Log in!{% endblock %}
 
 {% block stylesheets %}
-    <link href="{{ asset('css/security.css') }}" rel="stylesheet"/>
+    {{ encore_entry_link_tags('pageLogin') }}
 {% endblock %}
 
 {% block body %}
-    {% for message in app.flashes('success') %}
-        <div class="alert alert-success">
-            {{ message }}
-        </div>
-    {% endfor %}
     <form method="post">
     <div class="container-fluid">
 
@@ -20,7 +15,7 @@
 
 
             <!-- The content half -->
-            <div class="col-md-6 bg-light">
+            <div class="col-md-6 bg-light sm-12">
                 <div class="login d-flex align-items-center py-5">
 
                     <!-- Demo content-->
@@ -51,7 +46,7 @@
 
                                 </div>
                                 <div class="mb-3">
-                                    <a class="href_security_text" href="{{ path('app_register') }}">Create an account.</a>
+                                    <a class="" href="{{ path('app_register') }}">Create an account.</a>
                                 </div>
                                 {% if error %}
                                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>

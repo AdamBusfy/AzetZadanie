@@ -35,27 +35,10 @@ class Item
     private $photo;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Gallery::class, inversedBy="gallery")
+     * @ORM\ManyToOne(targetEntity=Gallery::class, inversedBy="items")
      * @ORM\JoinColumn(nullable=false)
      */
     private $gallery;
-
-//    /**
-//     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="items")
-//     */
-//    private $user;
-//
-//    public function getUser(): ?User
-//    {
-//        return $this->user;
-//    }
-//
-//    public function setUser(?user $user): self
-//    {
-//        $this->user = $user;
-//
-//        return $this;
-//    }
 
     public function getId(): ?int
     {
