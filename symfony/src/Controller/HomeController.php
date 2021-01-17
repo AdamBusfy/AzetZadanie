@@ -3,8 +3,10 @@
 namespace App\Controller;
 
 use App\Entity\Gallery;
+use App\Entity\Item;
 use App\Entity\User;
 use App\Form\CreateGalleryForm;
+use App\Form\DeleteForm;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,6 +21,8 @@ class HomeController extends AbstractController
      */
     public function index(Request $request): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_USER');
+
         $gallery = new Gallery();
         $form = $this->createForm(CreateGalleryForm::class, $gallery);
         $form->handleRequest($request);
@@ -38,10 +42,39 @@ class HomeController extends AbstractController
             //return $this->redirectToRoute('app_login');
         }
 
+
+
+        $deleteGalleryForm = $this->createForm(DeleteForm::class);
+        $deleteGalleryForm->handleRequest($request);
+
+        if ($deleteGalleryForm->isSubmitted() && $deleteGalleryForm->isValid()) {
+            $galleryRepository = $this->getDoctrine()
+                ->getRepository(Gallery::class);
+
+            $gallery = $galleryRepository->find($deleteGalleryForm->get('id')->getData());
+
+            if (!empty($gallery)) {
+                $entityManager = $this->getDoctrine()->getManager();
+
+                $galleryItems = $gallery->getItems();
+
+                foreach ($galleryItems as $galleryItem) {
+                    $entityManager->remove($galleryItem);
+                }
+
+                $entityManager->remove($gallery);
+                $entityManager->flush();
+                $this->addFlash('success_delete_gallery', 'Gallery deleted successfully!');
+            }
+        }
+
+
+
         $galleries = $this->getDoctrine()->getRepository(User::class)->find($user->getId())->getGalleries();
 
         return $this->render('page/homePage.html.twig', [
             'createGalleryForm' => $form->createView(),
+            'deleteGalleryForm' => $deleteGalleryForm,
             'galleries' => $galleries
         ]);
     }

@@ -1,61 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88142b11-98e8-4fff-9dbe-bfe6392316b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/symfony/assets/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/assets/css/navbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/assets/js/page/homepage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/assets/js/page/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/assets/js/page/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/config/packages/assets.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/config/packages/prod/webpack_encore.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/config/packages/test/webpack_encore.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/config/packages/webpack_encore.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/src/Controller/GalleryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/src/Form/CreateGalleryForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/src/Form/UploadPhotoForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/src/Migrations/Version20210114233818.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/templates/layouts/createGallery.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/templates/layouts/navbar.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/templates/layouts/uploadPhoto.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/templates/page/gallery.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/templates/page/homePage.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="88142b11-98e8-4fff-9dbe-bfe6392316b9" name="Default Changelist" comment="controllers upload">
+      <change afterPath="$PROJECT_DIR$/symfony/assets/css/page/spotlight.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/assets/css/page/title.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/assets/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/assets/js/module/navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/assets/js/module/spotlight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/assets/js/page/about.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/assets/js/page/gallery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/19-php0fAHNP-1610797730" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/19-phpD18QIA-1610805655" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/19-phpFEScOT-1610797621" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/19-phpGFZtp6-1610819687" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/19-phpIuAdUU-1610797608" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/19-phpMjmRGp-1610805502" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/19-phpMwKRHq-1610819706" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/19-phpeAJNLL-1610802065" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/19-phpwMOngc-1610805616" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/20-phpzSSzi0-1610750426" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/27-php5iJIPb-1610829756" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/27-php6NniqC-1610829823" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/27-phpJi5IY5-1610824984" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/27-phpavsLzI-1610824994" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/27-phpdlPrKb-1610829876" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/27-phpeSyJkc-1610829756" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/27-phpiaD5KV-1610829864" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/27-phpoQ0atR-1610829956" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/27-phponbokC-1610829760" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/27-phprfFzsd-1610829764" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/27-phpzmC8QV-1610829849" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-php4vyOcf-1610830852" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-php6dat3k-1610830696" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpEsULNs-1610830693" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpFRtGJ4-1610830835" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpFaToV2-1610844505" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpSBCwti-1610830851" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpXuDRoq-1610830989" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpZ0hIGV-1610830842" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpdALWC6-1610831073" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpeOrA5A-1610830690" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpgMgWWX-1610830829" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpjiTSoX-1610830701" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpkKkyPJ-1610831094" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpn7vgap-1610830848" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phppvENEY-1610830984" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phprm2RRU-1610831109" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpuH6QQC-1610830850" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpvhcPzW-1610830846" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpvlznZ2-1610830848" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpxnshrO-1610830699" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/30-phpyBYNJV-1610830852" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/34-php74wxfg-1610833089" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/34-phpST9EuM-1610832988" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/34-phpklJOqA-1610833117" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/34-phpyQ2eSM-1610833101" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/empty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/no_image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/uplo.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/src/Controller/AboutController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/src/Controller/UsersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/src/Form/DeleteForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/src/Form/EditPhotoForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/src/Form/UsersControllerForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/templates/layouts/editPhoto.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/templates/page/about.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/templates/page/users.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/php/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/php/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/public/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/assets/css/homepage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/assets/css/createGallery.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/public/css/security.css" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/assets/css/security.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/public/js/homepage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/src/Controller/AnotherPageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/assets/css/createGallery.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/assets/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/assets/css/page/homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/assets/css/navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/assets/css/navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/assets/css/security.css" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/assets/css/page/security.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/assets/js/page/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/assets/js/page/homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/assets/js/page/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/assets/js/page/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/assets/js/page/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/assets/js/page/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Controller/GalleryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Controller/GalleryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/src/Controller/ItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Controller/ItemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Controller/RegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/src/DataFixtures/ItemFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/DataFixtures/ItemFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/src/Entity/Gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Entity/Gallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/src/Entity/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Entity/Item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/src/Migrations/Version20210112123840.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Migrations/Version20210113182434.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/src/Migrations/Version20210112173629.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/src/Migrations/Version20210112190819.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Form/CreateGalleryForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Form/CreateGalleryForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Form/UploadPhotoForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Form/UploadPhotoForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/templates/brand_new/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/templates/item/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/templates/page/home/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/page/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/page/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/templates/layouts/createGallery.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/layouts/createGallery.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/templates/layouts/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/layouts/navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/templates/page/gallery.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/page/gallery.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/templates/page/homePage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/page/homePage.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/templates/page/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/page/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/templates/page/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/page/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,17 +222,21 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/symfony/public/data/gallery" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/symfony/public/data/gallery" />
+      <recent name="$PROJECT_DIR$/symfony/assets/css/page" />
       <recent name="$PROJECT_DIR$/symfony/assets" />
       <recent name="$PROJECT_DIR$/symfony/public" />
       <recent name="$PROJECT_DIR$/symfony/templates/layouts" />
-      <recent name="$PROJECT_DIR$/symfony/templates/page" />
-      <recent name="$PROJECT_DIR$/symfony/assets/js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/symfony/public/data/gallery" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -210,7 +249,8 @@
       <updated>1610386492725</updated>
       <workItem from="1610386493967" duration="10107000" />
       <workItem from="1610452462738" duration="53496000" />
-      <workItem from="1610625966057" duration="43769000" />
+      <workItem from="1610625966057" duration="75398000" />
+      <workItem from="1610831754136" duration="13587000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610478738191</created>
@@ -233,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610559359393</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="controllers upload">
+      <created>1610744533597</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610744533597</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +290,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="tables relationships" />
-    <option name="LAST_COMMIT_MESSAGE" value="tables relationships" />
+    <MESSAGE value="controllers upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="controllers upload" />
   </component>
   <component name="WindowStateProjectService">
     <state x="457" y="-911" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610713651872">
@@ -251,24 +299,24 @@
     </state>
     <state x="457" y="-911" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610713651872" />
     <state x="457" y="-911" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.777/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610645913681" />
-    <state x="299" y="-1148" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1610715367091">
+    <state x="299" y="-1148" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1610822783492">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="299" y="-1148" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610715367091" />
-    <state x="182" y="-1163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610729696069">
+    <state x="299" y="-1148" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610822783492" />
+    <state x="182" y="-1163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610884086862">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="182" y="-1163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610729696069" />
+    <state x="182" y="-1163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610884086862" />
     <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800/-574.-1440.2560.1440@0.0.1280.800" timestamp="1610626389307" />
     <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1610639131597" />
-    <state x="444" y="-958" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610715455063">
+    <state x="444" y="-958" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610848240720">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="444" y="-958" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610715455063" />
-    <state x="444" y="0" width="828" height="800" key="CommitChangelistDialog2" timestamp="1610559359009">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="444" y="-958" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610848240720" />
+    <state x="313" y="-1145" width="828" height="800" key="CommitChangelistDialog2" timestamp="1610890433953">
+      <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="313" y="-1145" key="CommitChangelistDialog2/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610478807766" />
+    <state x="313" y="-1145" key="CommitChangelistDialog2/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610890433953" />
     <state x="444" y="0" width="828" height="800" key="CommitChangelistDialog2/0.0.1280.800/-574.-1440.2560.1440@0.0.1280.800" timestamp="1610559359009" />
     <state x="371" y="-935" key="EditFileWatcherDialog" timestamp="1610646279000">
       <screen x="-574" y="-1440" width="2560" height="1440" />
@@ -278,15 +326,19 @@
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
     <state x="586" y="-816" width="680" height="192" key="Github.ShareDialog/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610478642730" />
-    <state x="108" y="-1201" key="NewPhpClassDialog" timestamp="1610714179429">
+    <state x="108" y="-1201" key="NewPhpClassDialog" timestamp="1610848207276">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="108" y="-1201" key="NewPhpClassDialog/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610714179429" />
+    <state x="108" y="-1201" key="NewPhpClassDialog/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610848207276" />
     <state x="341" y="133" key="NewPhpClassDialog/0.0.1280.800/-574.-1440.2560.1440@0.0.1280.800" timestamp="1610396996113" />
     <state x="306" y="-980" key="Vcs.Push.Dialog.v2" timestamp="1610478816158">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
     <state x="306" y="-980" key="Vcs.Push.Dialog.v2/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610478816158" />
+    <state x="329" y="-1103" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610848117251">
+      <screen x="-574" y="-1440" width="2560" height="1440" />
+    </state>
+    <state x="329" y="-1103" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610848117251" />
     <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610573405682">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -295,14 +347,18 @@
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
     <state x="-166" y="-1412" width="2152" height="960" key="dock-window-1/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610742756885" />
-    <state x="102" y="-1161" width="1560" height="882" key="find.popup" timestamp="1610723964836">
+    <state x="102" y="-1161" width="1560" height="882" key="find.popup" timestamp="1610887044848">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="102" y="-1161" width="1560" height="882" key="find.popup/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610723964836" />
+    <state x="102" y="-1161" width="1560" height="882" key="find.popup/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610887044848" />
     <state x="338" y="155" width="780" height="548" key="find.popup/0.0.1280.800/-574.-1440.2560.1440@0.0.1280.800" timestamp="1610573477446" />
-    <state x="371" y="-374" key="run.anything.popup" timestamp="1610717665018">
+    <state x="371" y="-374" key="run.anything.popup" timestamp="1610806523405">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="371" y="-374" key="run.anything.popup/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610717665018" />
+    <state x="371" y="-374" key="run.anything.popup/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610806523405" />
+    <state x="371" y="-1109" width="670" height="676" key="search.everywhere.popup" timestamp="1610846887453">
+      <screen x="-574" y="-1440" width="2560" height="1440" />
+    </state>
+    <state x="371" y="-1109" width="670" height="676" key="search.everywhere.popup/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610846887453" />
   </component>
 </project>

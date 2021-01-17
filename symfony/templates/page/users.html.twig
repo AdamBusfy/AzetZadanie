@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block title %}Users{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('pageHomepage') }}
+    {{ encore_entry_script_tags('pageHomepage') }}
+{% endblock %}
+
+{% block body %}
+    {% for message in app.flashes('success_delete_user') %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endfor %}
+
+    {{ include('layouts/navbar.html.twig') }}
+
+    <div class="container mt-5">
+        <ul class="list-group">
+
+        {% for user in users %}
+            {% set deleteForm = deleteUserForm.createView %}
+
+                <li class="list-group-item mt-5">
+                    <div style="display: inline-block">
+                        <p><strong>{{ user.email }}</strong></p>
+                    </div>
+
+                    <div class="pl-3" style="display: inline-block">
+                        <p>{{ user.roles[0] }}</p>
+                    </div>
+
+                    <div style="display: inline-block; float: right " >
+                        {{ form_start(deleteForm, { attr: { onsubmit: 'return confirm("Are you sure you want to delete this user?");' } }) }}
+                        {{ form_row(deleteForm.id, { attr: { value: user.id } }) }}
+                        {{ form_row(deleteForm.submitButton) }}
+                        {{ form_end(deleteForm) }}
+                    </div>
+                </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="behind_text">
+        <p>Users</p>
+    </div>
+{% endblock %}

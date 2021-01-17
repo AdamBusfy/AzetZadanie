@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block title %}Users{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('pageAbout') }}
+    {{ encore_entry_script_tags('pageAbout') }}
+
+{% endblock %}
+
+{% block body %}
+
+
+
+{#{% extends "_layouts/_master" %}#}
+{#{% block bodyClass %}css-body-class another-css-body-class{% endblock %}#}
+
+    <div class="spotlight">
+        {{ include('layouts/navbar.html.twig') }}
+
+        <div class="behind_text">
+            <p>About</p>
+        </div>
+    </div>
+
+
+
+{% endblock %}

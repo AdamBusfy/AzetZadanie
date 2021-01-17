@@ -17,6 +17,12 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "node-sass": "^4.14.1"
+        "bootstrap": "^4.5.3",
+        "jquery": "^3.5.1",
+        "lg-fullscreen": "^1.2.1",
+        "lg-thumbnail": "^1.2.1",
+        "lightgallery": "^1.10.0",
+        "node-sass": "^4.14.1",
+        "popper.js": "^1.16.1"
     }
 }

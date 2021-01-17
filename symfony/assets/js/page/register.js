@@ -1,1 +1,2 @@
-import '../../css/security.css';
+import '../bootstrap.js';
+import '../../css/page/security.css';

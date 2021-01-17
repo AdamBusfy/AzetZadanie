@@ -1,0 +1,10 @@
+.spotlight {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(
+                  circle,
+                  transparent 300px,
+                  rgba(0, 0, 0, 0.85) 350px
+  );
+}

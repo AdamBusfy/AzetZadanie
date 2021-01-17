@@ -5,11 +5,18 @@
 </div>
 
 <div class="nav">
+    {% for i in 0..30 %}
+        <div class="snow"></div>
+    {% endfor %}
+
     <div class="nav__content">
         <ul class="nav__list">
             <li id="home" class="nav__list-item" onClick="window.location.href = '{{ path('home_show') }}'">Home</li>
-            <li class="nav__list-item">About</li>
-            <li class="nav__list-item text-secondary"><a onClick="window.location.href = '{{ path('app_logout') }}'">Logout</a></li>
+            <li id="about" class="nav__list-item" onClick="window.location.href = '{{ path('about') }}'">About</li>
+            {% if is_granted('ROLE_ADMIN') %}
+                <li id="users" class="nav__list-item text-primary" onClick="window.location.href = '{{ path('admin_users') }}'">Users</li>
+            {% endif %}
+            <li id="logout" class="nav__list-item text-secondary"><a onClick="window.location.href = '{{ path('app_logout') }}'">Logout</a></li>
         </ul>
     </div>
 </div>
