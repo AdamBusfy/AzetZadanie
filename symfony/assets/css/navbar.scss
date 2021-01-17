@@ -81,7 +81,7 @@ body{
   }
   &__content{
     position: fixed;
-    top:50%;
+    top:-100px;
     transform: translate(0%,-50%);
     width: 100%;
     text-align: center;
@@ -151,6 +151,9 @@ body.nav-active{
           transition-delay: $transition--length * $i / 8 + .5 + s;
         }
       }
+    }
+    &__content {
+      top:50%;
     }
   }
 }

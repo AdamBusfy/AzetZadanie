@@ -1,4 +1,4 @@
-{{ form_start(editPhotoForm) }}
+{{ form_start(editGalleryForm) }}
 
 <div class="modal fade" id="{{ id }}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -11,20 +11,20 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    {{ form_row(editPhotoForm.name, { attr: { value: item.name } }) }}
+                    {{ form_row(editGalleryForm.name, { attr: { value: gallery.name } }) }}
                 </div>
                 <div class="form-group">
-                    {{ form_row(editPhotoForm.description, { value: item.description }) }}
-                    {{ form_row(editPhotoForm._token) }}
+                    {{ form_row(editGalleryForm.description, { value: gallery.description }) }}
+                    {{ form_row(editGalleryForm._token) }}
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                {{ form_row(editPhotoForm.submitButton) }}
+                {{ form_row(editGalleryForm.submitButton) }}
             </div>
         </div>
     </div>
 </div>
-{{ form_row(editPhotoForm.id, { attr: { value: item.id } }) }}
-{{ form_end(editPhotoForm) }}
+{{ form_row(editGalleryForm.id, { attr: { value: gallery.id } }) }}
+{{ form_end(editGalleryForm) }}
 

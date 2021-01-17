@@ -6,6 +6,7 @@ use App\Entity\Gallery;
 use App\Entity\Item;
 use App\Form\CreateGalleryForm;
 use App\Form\DeleteForm;
+use App\Form\EditForm;
 use App\Form\UploadPhotoForm;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -64,36 +65,34 @@ class GalleryController extends AbstractController
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->remove($item);
                 $entityManager->flush();
-                $this->addFlash('success_delete_photo', 'Photo deleted successfully!');
             }
         }
 
-///////
+        $editPhotoForm = $this->createForm(EditForm::class);
+        $editPhotoForm->handleRequest($request);
 
-//        $editPhotoForm = $this->createForm(EditPhotoForm::class);
-//        $editPhotoForm->handleRequest($request);
-//
-//        if ($editPhotoForm->isSubmitted() && $editPhotoForm->isValid()) {
-//            $galleryRepository = $this->getDoctrine()
-//                ->getRepository(Item::class);
-//
-//            $item = $galleryRepository->find($editPhotoForm->get('id')->getData());
-//
-//            if (!empty($item)) {
-//                $entityManager = $this->getDoctrine()->getManager();
-//                $entityManager->flush();
-//                $this->addFlash('success_update', 'Photo updated successfully!');
-//            }
-//        }
+        if ($editPhotoForm->isSubmitted() && $editPhotoForm->isValid()) {
+            $galleryRepository = $this->getDoctrine()
+                ->getRepository(Item::class);
 
+            /** @var Item $item */
+            $item = $galleryRepository->find($editPhotoForm->get('id')->getData());
 
-//////
+            if (!empty($item)) {
+                $item->setName($editPhotoForm->get('name')->getData());
+                $item->setDescription($editPhotoForm->get('description')->getData());
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->flush();
+            }
+
+        }
+
         $items = $this->getDoctrine()->getRepository(Gallery::class)->find($id)->getItems();
 
         return $this->render('page/gallery.html.twig', [
             'uploadPhotoForm' => $uploadPhotoForm->createView(),
             'deletePhotoForm' => $deletePhotoForm,
-//            'editPhotoForm' => $editPhotoForm->createView(),
+            'editPhotoForm' => $editPhotoForm,
             'items' => $items
         ]);
     }

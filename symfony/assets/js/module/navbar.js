@@ -31,5 +31,3 @@ window.onload=function(){
     })();
 }
 
-
-

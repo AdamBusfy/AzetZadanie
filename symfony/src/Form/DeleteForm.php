@@ -20,7 +20,7 @@ class DeleteForm extends AbstractType
             ->add('id', HiddenType::class)
             ->add('submitButton', SubmitType::class, [
                 'label'=>'Delete',
-                'attr'=> ['class' =>'btn btn-primary']
+                'attr'=> ['class' =>'btn btn-primary', 'style=> display:inline-block']
             ]);
     }
 

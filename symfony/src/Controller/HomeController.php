@@ -7,6 +7,7 @@ use App\Entity\Item;
 use App\Entity\User;
 use App\Form\CreateGalleryForm;
 use App\Form\DeleteForm;
+use App\Form\EditForm;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -64,17 +65,41 @@ class HomeController extends AbstractController
 
                 $entityManager->remove($gallery);
                 $entityManager->flush();
-                $this->addFlash('success_delete_gallery', 'Gallery deleted successfully!');
+
+            }
+
+            if ($request->isXmlHttpRequest()) {
+                return $this->json(['success' => true]);
             }
         }
 
+        ///////
 
+        $editGalleryForm = $this->createForm(EditForm::class);
+        $editGalleryForm->handleRequest($request);
+
+        if ($editGalleryForm->isSubmitted() && $editGalleryForm->isValid()) {
+            $galleryRepository = $this->getDoctrine()
+                ->getRepository(Gallery::class);
+
+            /** @var Item $gallery */
+            $gallery = $galleryRepository->find($editGalleryForm->get('id')->getData());
+
+            if (!empty($gallery)) {
+                $gallery->setName($editGalleryForm->get('name')->getData());
+                $gallery->setDescription($editGalleryForm->get('description')->getData());
+                $entityManager = $this->getDoctrine()->getManager();
+                $entityManager->flush();
+            }
+        }
+//////
 
         $galleries = $this->getDoctrine()->getRepository(User::class)->find($user->getId())->getGalleries();
 
         return $this->render('page/homePage.html.twig', [
             'createGalleryForm' => $form->createView(),
             'deleteGalleryForm' => $deleteGalleryForm,
+            'editGalleryForm' => $editGalleryForm,
             'galleries' => $galleries
         ]);
     }

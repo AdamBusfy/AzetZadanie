@@ -25,7 +25,7 @@ class UploadPhotoForm extends AbstractType
         $builder
             ->add('name')
             ->add('description', TextareaType::class, [
-                'label'=>'Create Gallery',
+                'label'=>'Description',
                 'required' => false,
             ])
             ->add('photo', FileType::class, [
