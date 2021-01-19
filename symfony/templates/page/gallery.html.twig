@@ -33,11 +33,7 @@
                 </div>
             </div>
             {% for item in items %}
-                {{ include('layouts/editPhoto.html.twig', {
-                    id: "editPhotoModal-" ~ item.id,
-                    editPhotoForm: editPhotoForm.createView,
-                    item: item
-                }) }}
+
                 {% set deleteForm = deletePhotoForm.createView %}
                 <div class="col-sm-6 col-md-4 col-xl-3 mt-4">
                     <div class="card cursor-pointer" style="background-color: #ffffff">
@@ -47,19 +43,28 @@
                             <img class="d-none" src="{{ asset(item.photo) }}" alt="{{ item.name }}"/>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title text-truncate" style="color: white"><strong>{{ item.name }}</strong></h5>
-                            <p class="card-text text-truncate" style="opacity: 0.5; color: white">{{ (item.description is empty) ? '...' :  item.description }}</p>
+                            <h5 class="card-title text-truncate"><strong><span data-item-name>{{ item.name }}</span></strong></h5>
+                            <p class="card-text text-truncate" style="opacity: 0.5"><span data-item-description>{{ (item.description is empty) ? '...' :  item.description }}</span>{{ (item.description is empty) ? '...' :  item.description }}</p>
+
                             {{ form_start(deleteForm) }}
                             {{ form_row(deleteForm.id, { attr: { value: item.id } }) }}
-                            <div style="display: inline-block">
-                                {{ form_row(deleteForm.submitButton) }}
+                            <div class="row">
+                                <div class="col-6">
+                                    {{ form_row(deleteForm.submitButton) }}
+                                </div>
+                                <div class="col-6 text-right">
+                                    <button type="button" class="btn btn-primary"
+                                            data-toggle="modal" data-target="#editPhotoModal-{{ item.id }}">Edit
+                                    </button>
+                                </div>
                             </div>
-                            <button type="button" style="display: inline-block;margin-left: 80px" class="btn btn-primary"
-                                    data-toggle="modal" data-target="#editPhotoModal-{{ item.id }}">Edit
-                            </button>
-
                             {{ form_end(deleteForm) }}
 
+                            {{ include('layouts/editPhoto.html.twig', {
+                                id: "editPhotoModal-" ~ item.id,
+                                editPhotoForm: editPhotoForm.createView,
+                                item: item
+                            }) }}
                         </div>
                     </div>
                 </div>

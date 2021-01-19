@@ -17,6 +17,8 @@ class UsersController extends AbstractController
 {
     /**
      * @Route("/admin/users", name="admin_users")
+     * @param Request $request
+     * @return Response
      */
     public function index(Request $request): Response
     {
@@ -33,8 +35,6 @@ class UsersController extends AbstractController
 
             if (!empty($user)) {
                 $entityManager = $this->getDoctrine()->getManager();
-
-                //$galleries = $user->getGalleries();
 
                 foreach ($user->getGalleries() as $gallery) {
                     foreach ($gallery->getItems() as $item) {

@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88142b11-98e8-4fff-9dbe-bfe6392316b9" name="Default Changelist" comment="add ajax calls">
-      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/27-php3QL3pq-1610921749" afterDir="false" />
+    <list default="true" id="88142b11-98e8-4fff-9dbe-bfe6392316b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/50-phpPLdY8s-1611081871" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/50-phpPTTMGg-1611081846" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/50-phpobUQk4-1611081892" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/56-phpaVYm8G-1611085699" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/59-php1CKDQI-1611086768" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/59-php1erpLy-1611086758" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/59-phpTX64dF-1611086007" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony/public/data/gallery/59-phpzeAFba-1611086723" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/assets/js/module/ajaxEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/assets/js/module/ajaxEdit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/assets/js/page/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/assets/js/page/gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/assets/js/page/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/assets/js/page/homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Controller/GalleryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Controller/GalleryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Controller/ItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Controller/ItemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Controller/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/Controller/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/templates/layouts/createGallery.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/layouts/createGallery.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony/templates/page/gallery.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/page/gallery.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/templates/page/homePage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/page/homePage.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony/templates/page/users.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/page/users.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +186,7 @@
       <workItem from="1610452462738" duration="53496000" />
       <workItem from="1610625966057" duration="75398000" />
       <workItem from="1610831754136" duration="25065000" />
+      <workItem from="1611049177324" duration="5939000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1610478738191</created>
@@ -208,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610920975017</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add ajax calls">
+      <created>1611049202711</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1611049202711</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,10 +272,10 @@
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
     <state x="444" y="-958" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610914960746" />
-    <state x="224" y="-1145" width="874" height="1063" key="CommitChangelistDialog2" timestamp="1610921226916">
+    <state x="224" y="-1145" width="874" height="1063" key="CommitChangelistDialog2" timestamp="1611049202312">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="224" y="-1145" width="874" height="1063" key="CommitChangelistDialog2/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610921226916" />
+    <state x="224" y="-1145" width="874" height="1063" key="CommitChangelistDialog2/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1611049202312" />
     <state x="444" y="0" width="828" height="800" key="CommitChangelistDialog2/0.0.1280.800/-574.-1440.2560.1440@0.0.1280.800" timestamp="1610559359009" />
     <state x="371" y="-935" key="EditFileWatcherDialog" timestamp="1610646279000">
       <screen x="-574" y="-1440" width="2560" height="1440" />
@@ -265,10 +294,10 @@
     </state>
     <state x="108" y="-1201" key="NewPhpClassDialog/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610848207276" />
     <state x="341" y="133" key="NewPhpClassDialog/0.0.1280.800/-574.-1440.2560.1440@0.0.1280.800" timestamp="1610396996113" />
-    <state x="306" y="-980" key="Vcs.Push.Dialog.v2" timestamp="1610921236463">
+    <state x="306" y="-980" key="Vcs.Push.Dialog.v2" timestamp="1611049211174">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="306" y="-980" key="Vcs.Push.Dialog.v2/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610921236463" />
+    <state x="306" y="-980" key="Vcs.Push.Dialog.v2/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1611049211174" />
     <state x="329" y="-1103" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1610848117251">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
@@ -277,10 +306,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800/-574.-1440.2560.1440@0.0.1280.800" timestamp="1610573405682" />
-    <state x="-166" y="-1412" width="2152" height="960" key="dock-window-1" timestamp="1610742756885">
+    <state x="-574" y="-1440" width="2067" height="1440" key="dock-window-1" timestamp="1611087148878">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>
-    <state x="-166" y="-1412" width="2152" height="960" key="dock-window-1/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1610742756885" />
+    <state x="-574" y="-1440" width="2067" height="1440" key="dock-window-1/0.0.1280.800/-574.-1440.2560.1440@-574.-1440.2560.1440" timestamp="1611087148878" />
     <state x="102" y="-1161" width="1560" height="882" key="find.popup" timestamp="1610915601769">
       <screen x="-574" y="-1440" width="2560" height="1440" />
     </state>

@@ -18,6 +18,9 @@ class GalleryController extends AbstractController
 {
     /**
      * @Route("/gallery/{id}", name="gallery")
+     * @param Request $request
+     * @param int $id
+     * @return Response
      */
     public function index(Request $request, int $id): Response
     {

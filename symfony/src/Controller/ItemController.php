@@ -45,6 +45,8 @@ class ItemController extends AbstractController
 
     /**
      * @Route("/item/edit/{id}")
+     * @param int $id
+     * @return Response
      */
     public function update(int $id): Response
     {
@@ -67,6 +69,8 @@ class ItemController extends AbstractController
 
     /**
      * @Route("/item/delete/{id}")
+     * @param Item $item
+     * @return Response
      */
     public function delete(Item $item): Response
     {

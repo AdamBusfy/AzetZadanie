@@ -22,8 +22,8 @@
         <ul class="list-group">
 
         {% for user in users %}
-            {% set deleteForm = deleteUserForm.createView %}
-
+            {% if user.getRoles()[0] != 'ROLE_ADMIN'%}
+                {% set deleteForm = deleteUserForm.createView %}
                 <li class="list-group-item mt-5">
                     <div style="display: inline-block">
                         <p><strong>{{ user.email }}</strong></p>
@@ -40,6 +40,7 @@
                         {{ form_end(deleteForm) }}
                     </div>
                 </li>
+            {% endif %}
         {% endfor %}
         </ul>
     </div>
